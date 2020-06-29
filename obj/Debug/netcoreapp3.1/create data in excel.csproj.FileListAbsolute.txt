@@ -1,0 +1,13 @@
+C:\Users\Vinicius\Desktop\create data in excel\bin\Debug\netcoreapp3.1\create data in excel.exe
+C:\Users\Vinicius\Desktop\create data in excel\bin\Debug\netcoreapp3.1\create data in excel.deps.json
+C:\Users\Vinicius\Desktop\create data in excel\bin\Debug\netcoreapp3.1\create data in excel.runtimeconfig.json
+C:\Users\Vinicius\Desktop\create data in excel\bin\Debug\netcoreapp3.1\create data in excel.runtimeconfig.dev.json
+C:\Users\Vinicius\Desktop\create data in excel\bin\Debug\netcoreapp3.1\create data in excel.dll
+C:\Users\Vinicius\Desktop\create data in excel\bin\Debug\netcoreapp3.1\create data in excel.pdb
+C:\Users\Vinicius\Desktop\create data in excel\obj\Debug\netcoreapp3.1\create data in excel.csprojAssemblyReference.cache
+C:\Users\Vinicius\Desktop\create data in excel\obj\Debug\netcoreapp3.1\create data in excel.AssemblyInfoInputs.cache
+C:\Users\Vinicius\Desktop\create data in excel\obj\Debug\netcoreapp3.1\create data in excel.AssemblyInfo.cs
+C:\Users\Vinicius\Desktop\create data in excel\obj\Debug\netcoreapp3.1\create data in excel.csproj.CoreCompileInputs.cache
+C:\Users\Vinicius\Desktop\create data in excel\obj\Debug\netcoreapp3.1\create data in excel.dll
+C:\Users\Vinicius\Desktop\create data in excel\obj\Debug\netcoreapp3.1\create data in excel.pdb
+C:\Users\Vinicius\Desktop\create data in excel\obj\Debug\netcoreapp3.1\create data in excel.genruntimeconfig.cache
