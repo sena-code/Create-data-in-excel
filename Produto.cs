@@ -8,6 +8,7 @@ namespace create_data_in_excel
         public string Name { get; set; }
         public float Cost { get; set; }
         private const string PATH = "Database/produto.csv";
+        private const string PATHDIRECTORY = "Database";
         private string LinePrepare(Produto p)
         {
             return $"codigo={p.Code}; nome={p.Name}; preço={p.Cost}";
@@ -22,9 +23,9 @@ namespace create_data_in_excel
         public Produto ()
         {
             
-            if (!Directory.Exists(PATH))
+            if (!Directory.Exists(PATHDIRECTORY))
         {
-            Directory.CreateDirectory(PATH);
+            Directory.CreateDirectory(PATHDIRECTORY);
             
         }
         
