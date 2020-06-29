@@ -21,6 +21,14 @@ namespace create_data_in_excel
 
         public Produto ()
         {
+            
+            if (!Directory.Exists(PATH))
+        {
+            Directory.CreateDirectory(PATH);
+            
+        }
+        
+            
             //the file is create if does not exist
             if(!File.Exists(PATH)){
                 File.Create(PATH).Close();
