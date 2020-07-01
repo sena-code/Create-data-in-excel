@@ -25,6 +25,7 @@ namespace create_data_in_excel
             
        
             Produto p = new Produto();
+            p.Remove("597,8");
             List<Produto> list = p.Read();
             List<Produto> pp = p.Filtre("Keyboard & Mouse");
             
@@ -33,7 +34,6 @@ namespace create_data_in_excel
               foreach(Produto iten in list)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                p.Remove("Things");
                 Console.WriteLine($"R$ {iten.Cost} - {iten.Name}");
                 Console.ResetColor();
                 

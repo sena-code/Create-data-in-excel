@@ -61,32 +61,48 @@ namespace create_data_in_excel
 
                 
                 prod.Add(p);
+                //orderned names as alphabet
+                prod = prod.OrderBy(z => z.Name).ToList();
                 
             } return prod;
 
           
         }
             
-
+            
+            /// <summary>
+            /// Create a filtre list for a specific name
+            /// </summary>
+            /// <param name="_name">Filtre List</param>
+            /// <returns>Name and Cost specific</returns>
             public List<Produto> Filtre(string _name){
 
              return Read().FindAll(x => x.Name == _name);
+        
             }
+
+            
     
 
             public void Remove(string _termo)
             {
+                //Create a string's list for save csv's lines
                 List<string> lines = new List<string>();
 
+                //we use "using" for open and close our file with database
                 using(StreamReader file = new StreamReader(PATH))
                 {
+                    //Read the file
                     string line;
                     while ((line = file.ReadLine()) != null)
                     {
                         lines.Add(line);
                     }
+                    //Remove all lines that have the term solicited
                     lines.RemoveAll(z => z.Contains(_termo));
                 }  
+
+                //rewrite the file
 
                 using(StreamWriter output = new StreamWriter(PATH))
                 {
