@@ -16,33 +16,37 @@ namespace create_data_in_excel
             p1.Register(p1);
 
              Produto p2 = new Produto();
-            p1.Code = 2;
-            p1.Name = "Things";
-            p1.Cost = 598.8f;
+            p2.Code = 2;
+            p2.Name = "Things";
+            p2.Cost = 598.8f;
 
-            p1.Register(p1);
+            p2.Register(p2);
 
-            List<Produto> list = p1.Read();
+            
+       
+            Produto p = new Produto();
+            List<Produto> list = p.Read();
+            List<Produto> pp = p.Filtre("Keyboard & Mouse");
+            
+        
 
-            foreach(Produto iten in list)
+              foreach(Produto iten in list)
             {
+                Console.ForegroundColor = ConsoleColor.Red;
+                p.Remove("Things");
                 Console.WriteLine($"R$ {iten.Cost} - {iten.Name}");
+                Console.ResetColor();
+                
+
             }
 
             
 
-            var name = list.Find(x => x.Name == "Things");
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine(name.Cost);
-            Console.ResetColor();
-            var key = list.Find(x => x.Name == "Keyboard & Mouse");
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine(key.Name);
-            Console.ResetColor();
-                
+            foreach(Produto iten in pp)
+            {
+                Console.WriteLine($"R$ {iten.Cost} - {iten.Name}");
 
-
-             
+            }
         }
     }
 }

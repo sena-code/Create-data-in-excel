@@ -13,6 +13,7 @@ namespace create_data_in_excel
         private const string PATH = "Database/produto.csv";
         private const string PATHDIRECTORY = "Database";
 
+
         /// <summary>
         /// Preparing the lines
         /// </summary>
@@ -42,6 +43,8 @@ namespace create_data_in_excel
         {
             //create the list for get the return 
             List<Produto> prod = new List<Produto>();
+
+
             //Read the .csv and add a array lines
             string[] lines = File.ReadAllLines(PATH);
 
@@ -56,13 +59,48 @@ namespace create_data_in_excel
                 p.Name = Separate(data[1]);
                 p.Cost = float.Parse( Separate(data[2]));
 
+                
                 prod.Add(p);
                 
             } return prod;
 
+          
+        }
             
 
-        }
+            public List<Produto> Filtre(string _name){
+
+             return Read().FindAll(x => x.Name == _name);
+            }
+    
+
+            public void Remove(string _termo)
+            {
+                List<string> lines = new List<string>();
+
+                using(StreamReader file = new StreamReader(PATH))
+                {
+                    string line;
+                    while ((line = file.ReadLine()) != null)
+                    {
+                        lines.Add(line);
+                    }
+                    lines.RemoveAll(z => z.Contains(_termo));
+                }  
+
+                using(StreamWriter output = new StreamWriter(PATH))
+                {
+                    foreach(string ln in lines)
+                    {
+                        output.Write(ln + "\n");
+                    }
+                }
+
+
+                
+            
+            }
+        
 
         /// <summary>
         /// To separate itens after "="
@@ -101,4 +139,5 @@ namespace create_data_in_excel
             this.Cost = _cost;
         }
     }
+
 }
