@@ -21,11 +21,24 @@ namespace create_data_in_excel
             p2.Cost = 598.8f;
 
             p2.Register(p2);
+            
+            Produto p3 = new Produto();
+            p3.Code = 4;
+            p3.Name = "Red Dragon";
+            p3.Cost = 598.8f;
+
+            p3.Register(p3);
+
+            Produto changed = new Produto();
+            changed.Code = 3;
+            changed.Cost =  700f;
+            changed.Name = "Razer";
+            changed.Change(changed);
 
             
        
             Produto p = new Produto();
-            p.Remove("597,8");
+            p.Remove("Red Dragon");
             List<Produto> list = p.Read();
             List<Produto> pp = p.Filtre("Keyboard & Mouse");
             
@@ -47,6 +60,8 @@ namespace create_data_in_excel
                 Console.WriteLine($"R$ {iten.Cost} - {iten.Name}");
 
             }
+
+            
         }
     }
 }
